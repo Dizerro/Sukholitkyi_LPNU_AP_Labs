@@ -1,6 +1,5 @@
 from math import log , log10 , cos , tan
-print("Введіть значення X в проміжку [2;5]:")
-x = float(input())
+x = 2
 a = 2
 b = 5
 h = 0.2
