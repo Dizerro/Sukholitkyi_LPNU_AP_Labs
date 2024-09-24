@@ -11,7 +11,7 @@ def taylor_series(x, m, error_tol):
     sum_result = 1  # початкове значення 1, оскільки ряд починається з 1
     term = 1  # перший член ряду
     n = 1
-    while abs(term) > error_tol:  # доки похибка більша за допустиму
+    while abs(term) > error_tol:  
         term = (-1)**n * math.prod(range(m, m - n, -1)) / math.factorial(n) * x**n
         sum_result += term
         n += 1
