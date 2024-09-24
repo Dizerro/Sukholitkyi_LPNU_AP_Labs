@@ -4,7 +4,7 @@ a = 2
 b = 5
 h = 0.2
 
-x = 2
+x = a
 while a <= x <= b:
     if x < 3:
         y=log10(abs(log(x) + 1/(cos(x))))
