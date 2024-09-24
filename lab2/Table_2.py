@@ -1,5 +1,5 @@
 import numpy as np
-from math import prod , factorial
+from math import factorial , prod 
 
 m = 20
 h = 0.05  
