@@ -1,5 +1,5 @@
 import numpy as np
-import math
+from math import prod , factorial
 
 m = 20
 h = 0.05  
@@ -8,16 +8,15 @@ x_values = np.arange(0, 0.5 + h, h)  # точки на інтервалі [0, 0.
 
 # Функція для обчислення ряду
 def taylor_series(x, m, error_tol):
-    sum_result = 1  # початкове значення 1, оскільки ряд починається з 1
-    term = 1  # перший член ряду
+    sum_result = 1  
+    term = 1  
     n = 1
     while abs(term) > error_tol:  
-        term = (-1)**n * math.prod(range(m, m - n, -1)) / math.factorial(n) * x**n
+        term = (-1)**n * prod(range(m, m - n, -1)) / factorial(n) * x**n
         sum_result += term
         n += 1
     return sum_result
 
-# Табуляція функції для всіх значень x
 results = [(x, taylor_series(x, m, d)) for x in x_values]
 
 for x, value in results:
