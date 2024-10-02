@@ -5,16 +5,18 @@ b = 5
 h = 0.2
 
 x = a
+arg1 = 3
+arg2 = 4
 while a <= x <= b:
-    if x < 3:
+    if x < arg1:
         y=log10(abs(log(x) + 1/(cos(x))))
         print(f"x=,{x}, y=, {y}")
 
-    elif 3<=x<4:
+    elif arg1<=x<arg2:
         y = 1/tan(x + log(x))
         print(f"x=,{x}, y=, {y}")
     
-    elif x > 4:
+    elif x > arg2:
         y = 1/(16 - x**2)
         print(f"x=,{x}, y=, {y}")
     

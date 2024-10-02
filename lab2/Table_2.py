@@ -33,4 +33,5 @@ results = [(x, taylor_series(x, m, d)) for x in x_values]
 
 # Виведення результатів
 for x, value in results:
-    print(f"x = {x:.2f}, y = {value:.10f}")
+    x = round(x , 3)
+    print(f"x = {x}, y = {value}")
