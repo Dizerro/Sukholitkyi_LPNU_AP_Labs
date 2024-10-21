@@ -4,11 +4,11 @@ K = int(input("enter key:"))
 def generate_cipher(S, K):
     S = list(S)  
     C = []  
-    index = 0  
-    
+    index = 0
+
     while S:
         index = (index + K - 1) % len(S)
-        C.append(S.pop(index)) 
+        C.append(S.pop(index))
         
     return ''.join(C)
 
