@@ -36,8 +36,11 @@ def calculate_fi(matrix):
 
 def calculate_F(fi):
     if len(fi) == 0:
-        return 0  
-    return sum(fi) / len(fi)
+        return 0 
+    total = 0
+    for value in fi:
+        total += value
+    return total / len(fi)
 
 fi_values = calculate_fi(sorted_matrix)
 F_value = calculate_F(fi_values)
